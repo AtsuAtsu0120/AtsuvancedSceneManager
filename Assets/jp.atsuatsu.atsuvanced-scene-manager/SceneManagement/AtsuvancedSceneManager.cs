@@ -15,7 +15,7 @@ namespace AtsuvancedSceneManager.Core
         
         private static ISceneLifeCycleManager _cachedSceneLifeCycleManager;
     
-        public static async UniTaskVoid LoadSceneAsync<T>(ISceneData data) where T : ISceneLifeCycleManager, new()
+        public static async UniTaskVoid LoadSceneAsync<T, T2>(T2 data) where T : ISceneLifeCycleManager, new() where T2 : ISceneData
         {
             _cachedSceneLifeCycleManager?.OnUnLoaded();
             _cachedSceneLifeCycleManager = new T();

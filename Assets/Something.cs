@@ -19,7 +19,7 @@ public class TestSceneLifeCycleManager : ISceneLifeCycleManager
 {
     public string SceneName => "TestScene";
 
-    public void OnLoaded(in ISceneData data)
+    public void OnLoaded<T>(in T data) where T : ISceneData
     {
         var entoryPoint = Object.FindFirstObjectByType<EntryPoint>();
         entoryPoint.Initialize(data);

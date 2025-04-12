@@ -23,5 +23,13 @@ namespace AtsuvancedSceneManager.Core
             await SceneManager.LoadSceneAsync(_cachedSceneLifeCycleManager.SceneName);
             _cachedSceneLifeCycleManager.OnLoaded(data);
         }
+
+#if UNITY_EDIOR
+        [RuntimeInitializeOnLoadMethod]
+        private static void RuntimeInitializeOnLoad()
+        {
+            _cachedSceneLifeCycleManager = null;
+        }
+#endif
     }
 }

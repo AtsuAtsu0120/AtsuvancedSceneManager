@@ -1,0 +1,13 @@
+{
+  "name": "jp.atsuatsu.atsuvanced-scene-manager",
+  "displayName": "Atsuvanced Scene Manager",
+  "version": "0.0.1",
+  "unity": "2022.3",
+  "description": "SceneManager created by AtsuAtsu",
+  "keywords": ["Scene Management"],
+  "author": {
+    "name": "AtsuAtsu",
+    "email": "kaido_atsuya@atsuatsu.dev",
+    "url": "https://github.com/AtsuAtsu0120"
+  }
+}
